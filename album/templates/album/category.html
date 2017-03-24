@@ -1,4 +1,21 @@
+{% extends "base.html" %}
+{% block section %}
+	<H2>Category</H2>
+	<hr>
+{% endblock section %}
+{% block maincontent %}
+<div>
+	{% for c in object_list %}
+	<a href="{% url 'category-detail' c.pk %}">
+		{{ c.name }}
+	</a>
+	{% endfor %}
+</div>
+{% endblock maincontent %}
+
 <!--{{ object_list }}--> <!-- para imprimir (echo)-->
+
+<!--
 <h1>ALBUM</h1>
 <H2>Category</H2>
 <div>
@@ -8,3 +25,6 @@
 	</a>
 	{% endfor %}
 </div>
+-->
+
+<!-- Modificamos para usar una plantilla -->
