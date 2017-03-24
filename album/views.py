@@ -6,6 +6,7 @@ from django.views.generic import ListView, DetailView # a
 def first_view(request):
 	return HttpResponse("<h1>Esta es mi primer vista</h1>")
 
+
 def category(request):
 	category_list=Category.objects.all() #Guarda el contenido del modelo -> Category
 	context={'object_list':category_list}
@@ -21,3 +22,6 @@ class PhotoListView(ListView):
 
 class PhotoDetailView(DetailView):
 	model=Photo
+
+
+
